@@ -129,9 +129,9 @@ Additional OpenFaaS options in `values.yaml`.
 | `serviceType` | Type of external service to use `NodePort/LoadBalancer` | `NodePort` |
 | `ingress.enabled` | Create ingress resources | `false` |
 | `rbac` | Enable RBAC | `true` |
-| `faasnetesd.readTimeout` | Queue worker read timeout | `20s` |
-| `faasnetesd.writeTimeout` | Queue worker write timeout | `20s` |
-| `faasnetesd.imagePullPolicy` | Image pull policy for deployed functions | `Always` |
+| `faasnetes.readTimeout` | Queue worker read timeout | `20s` |
+| `faasnetes.writeTimeout` | Queue worker write timeout | `20s` |
+| `faasnetes.imagePullPolicy` | Image pull policy for deployed functions | `Always` |
 | `gateway.readTimeout` | Queue worker read timeout | `20s` |
 | `gateway.writeTimeout` | Queue worker write timeout | `20s` |
 | `gateway.upstreamTimeout` | Maximum duration of upstream function call | `20s` |

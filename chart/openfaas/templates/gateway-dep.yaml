@@ -90,29 +90,29 @@ spec:
         - name: function_namespace
           value: {{ $functionNs | quote }}
         - name: read_timeout
-          value: "{{ .Values.faasnetesd.readTimeout }}"
+          value: "{{ .Values.faasnetes.readTimeout }}"
         - name: write_timeout
-          value: "{{ .Values.faasnetesd.writeTimeout }}"
+          value: "{{ .Values.faasnetes.writeTimeout }}"
         - name: image_pull_policy
-          value: {{ .Values.faasnetesd.imagePullPolicy | quote }}
+          value: {{ .Values.faasnetes.imagePullPolicy | quote }}
         ports:
         - containerPort: 8081
           protocol: TCP
       {{- else }}
       - name: faas-netes
-        image: {{ .Values.faasnetesd.image }}
-        imagePullPolicy: {{ .Values.faasnetesd.imagePullPolicy | quote }}
+        image: {{ .Values.faasnetes.image }}
+        imagePullPolicy: {{ .Values.faasnetes.imagePullPolicy | quote }}
         env:
         - name: port
           value: "8081"
         - name: function_namespace
           value: {{ $functionNs | quote }}
         - name: read_timeout
-          value: "{{ .Values.faasnetesd.readTimeout }}"
+          value: "{{ .Values.faasnetes.readTimeout }}"
         - name: write_timeout
-          value: "{{ .Values.faasnetesd.writeTimeout }}"
+          value: "{{ .Values.faasnetes.writeTimeout }}"
         - name: image_pull_policy
-          value: {{ .Values.faasnetesd.imagePullPolicy | quote }}
+          value: {{ .Values.faasnetes.imagePullPolicy | quote }}
         ports:
         - containerPort: 8081
           protocol: TCP
